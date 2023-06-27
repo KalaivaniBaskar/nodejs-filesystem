@@ -20,7 +20,7 @@ app.get('/timestamp', function (req, res) {
     const content = date.toLocaleString();
 
   //  fs.writeFileSync("./current-date-time.txt", timest, (err)=> {
-    fs.writeFileSync(`./Files/${filename}.txt`, content, (err)=> {
+    fs.writeFileSync(`${dirPath}/${filename}.txt`, content, (err)=> {
         if(err){
            return res.send({message: 'error writing timestamp'});
         }
